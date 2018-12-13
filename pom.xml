@@ -8,7 +8,7 @@
     <url>https://github.com/craftercms/solr-extensions</url>
 
 	<packaging>jar</packaging>
-    <version>3.0.16</version><!-- craftercms version flag -->
+    <version>3.0.19-SNAPSHOT</version><!-- craftercms version flag -->
     <organization>
         <name>CrafterCMS</name>
         <url>http://craftercms.org</url>
