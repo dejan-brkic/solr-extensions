@@ -18,11 +18,11 @@ public class SimpleIndexSearcher {
 	private final IndexSearcher searcher;
 	
 	public SimpleIndexSearcher(IndexReaderContext reader) {
-		this.searcher = new IndexSearcher(getParnetContext(reader));
+		this.searcher = new IndexSearcher(getParentContext(reader));
 	}
 
-	private IndexReaderContext getParnetContext(IndexReaderContext reader) {
-		return reader.parent == null ? reader : getParnetContext(reader.parent);
+	private IndexReaderContext getParentContext(IndexReaderContext reader) {
+		return reader.parent == null ? reader : getParentContext(reader.parent);
 	}
 
 	/**
