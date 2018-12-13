@@ -1,4 +1,20 @@
-package org.crafter.solr.contentType;
+/*
+ * Copyright (C) 2007-2018 Crafter Software Corporation. All Rights Reserved.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+package org.craftercms.solr.contentType;
 
 import java.io.IOException;
 import java.util.Map;
@@ -12,9 +28,9 @@ import org.apache.lucene.queries.function.FunctionValues;
 import org.apache.lucene.queries.function.ValueSource;
 import org.apache.lucene.queries.function.docvalues.StrDocValues;
 import org.apache.lucene.search.SortField;
-import org.crafter.solr.SimpleIndexSearcher;
-import org.crafter.solr.SimpleQueryBuilder;
-import org.crafter.solr.StringValueSourceSortField;
+import org.craftercms.solr.SimpleIndexSearcher;
+import org.craftercms.solr.SimpleQueryBuilder;
+import org.craftercms.solr.StringValueSourceSortField;
 
 /**
  * Defines a function for mapping any Crafter Content Type containing a Repeating Group from that group's key to its respective value.
