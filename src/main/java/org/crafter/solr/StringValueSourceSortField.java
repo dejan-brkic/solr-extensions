@@ -63,12 +63,12 @@ public class StringValueSourceSortField extends SortField {
 		}
 
 		@Override
-		public int compareBottom(int doc) {
+		public int compareBottom(int doc) throws IOException {
 			return compare(bottom, docVals.strVal(doc));
 		}
 
 		@Override
-		public void copy(int slot, int doc) {
+		public void copy(int slot, int doc) throws IOException {
 			values[slot] = docVals.strVal(doc);
 		}
 
@@ -93,7 +93,7 @@ public class StringValueSourceSortField extends SortField {
 		}
 
 		@Override
-		public int compareTop(int doc) {
+		public int compareTop(int doc) throws IOException {
 			final String docValue = docVals.strVal(doc);
 			return compare(topValue, docValue);
 		}

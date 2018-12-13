@@ -68,7 +68,7 @@ public class RepeatingGroupContentTypeValueSource extends ValueSource {
 
 		return new StrDocValues(this) {
 			@Override
-			public String strVal(int doc) {
+			public String strVal(int doc) throws IOException {
 				return repeatingGroupContentType.getValue(keyValues.strVal(doc));
 			}
 		};
