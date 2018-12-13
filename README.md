@@ -25,16 +25,16 @@ Follow these steps for example setup and usage of these functions.
 
 ## Setup
 1. Define a Crafter Taxonomy called "Countries"
-1.1. Add one or more key/value pairs to this taxonomy
+  1. Add one or more key/value pairs to this taxonomy
 1. Define a Crafter Content type called "Asset"
-2.1. Add a site component data source to the taxonomy created above
-2.2. Add a metadata dropdown field, called "country_s", which points to this datasource
-2.3. Create one or more instances of "Asset"
+  1. Add a site component data source to the taxonomy created above
+  1. Add a metadata dropdown field, called "country_s", which points to this datasource
+  1. Create one or more instances of "Asset"
 1. Build and deploy this jar to {crafter-home}/bin/solr/server/solr/configsets/crafter_configs/lib
 1. Add configuration to these new value sources
-4.1. Add the dependent solr core jars, if not already present: `<lib dir="${solr.install.dir:../../../..}/dist/" regex="solr-core-\d.*\.jar" />`
-4.2. Add the function reference and name (as desired) for the taxonomy value source: `<valueSourceParser name="taxonomyValue" class="org.crafter.solr.contentType.taxonomy.TaxonomyValueSourceParser" />`
-4.3. Add the function reference and name (as desired) for the generic content type value source: `<valueSourceParser name="contentTypeValue" class="org.crafter.solr.contentType.RepeatingGroupContentTypeValueSourceParser" />`
+  1. Add the dependent solr core jars, if not already present: `<lib dir="${solr.install.dir:../../../..}/dist/" regex="solr-core-\d.*\.jar" />`
+  1. Add the function reference and name (as desired) for the taxonomy value source: `<valueSourceParser name="taxonomyValue" class="org.crafter.solr.contentType.taxonomy.TaxonomyValueSourceParser" />`
+  1. Add the function reference and name (as desired) for the generic content type value source: `<valueSourceParser name="contentTypeValue" class="org.crafter.solr.contentType.RepeatingGroupContentTypeValueSourceParser" />`
 
 ## Querying
 -  Execute a query for `content-type: "/component/asset"` and observe country_s shows up as a key string
